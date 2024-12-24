@@ -4,9 +4,9 @@
 // @version         0.1.3
 // @description     深圳技术大学自动评教——2024-2025-1
 // @author          xiaowhang
-// @matches         https://jwxt.sztu.edu.cn/jsxsd/framework/xsMain.htmlx#*
-// @matches         https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_list.do*
-// @matches         https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_edit.do*
+// @match           https://jwxt.sztu.edu.cn/jsxsd/framework/xsMain.htmlx#*
+// @match           https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_list.do*
+// @match           https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_edit.do*
 // @grant           none
 // @license         MIT
 // ==/UserScript==
