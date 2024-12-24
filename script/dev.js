@@ -28,7 +28,7 @@ function handleEditPage() {
   for (const td of tdList) {
     td.children[0].click();
   }
-  tdList[tdList.length - 2].children[2].click();
+  tdList[tdList.length - 3].children[2].click();
 
   const submit = document.getElementById('bc');
   submit.click();
