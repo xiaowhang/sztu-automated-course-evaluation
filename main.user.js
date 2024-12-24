@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            SZTU自动评教
 // @namespace       https://github.com/xiaowhang/sztu-automated-course-evaluation
-// @version         0.1.3
+// @version         0.1.4
 // @description     深圳技术大学自动评教——2024-2025-1
 // @author          xiaowhang
 // @match           https://jwxt.sztu.edu.cn/jsxsd/framework/xsMain.htmlx#*
@@ -42,7 +42,7 @@ function handleEditPage() {
   for (const td of tdList) {
     td.children[0].click();
   }
-  tdList[tdList.length - 2].children[2].click();
+  tdList[tdList.length - 3].children[2].click();
 
   const submit = document.getElementById('bc');
   submit.click();
