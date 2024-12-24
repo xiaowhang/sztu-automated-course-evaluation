@@ -1,0 +1,40 @@
+name: Generate main.user.js
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'script/dev.js'
+      - 'script/mate.json'
+  pull_request:
+    paths:
+      - 'script/dev.js'
+      - 'script/mate.json'
+
+jobs:
+  generate_script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Generate main.user.js
+        run: |
+          node script/generate.js  # 运行 generate.js 生成 main.user.js 文件
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git status
+          git add main.user.js
+          git commit -m "Generate main.user.js" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
