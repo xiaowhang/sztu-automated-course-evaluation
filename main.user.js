@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name            sztu自动评教
-// @namespace       http://tampermonkey.net/
+// @name            SZTU自动评教
+// @namespace       https://github.com/xiaowhang/sztu-automated-course-evaluation
 // @version         0.1.3
 // @description     深圳技术大学自动评教——2024-2025-1
 // @author          xiaowhang
