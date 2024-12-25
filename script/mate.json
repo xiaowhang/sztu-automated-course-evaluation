@@ -1,10 +1,17 @@
 {
   "name": "SZTU自动评教",
   "namespace": "https://github.com/xiaowhang/sztu-automated-course-evaluation",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "深圳技术大学自动评教——2024-2025-1",
   "author": "xiaowhang",
-  "match": ["https://jwxt.sztu.edu.cn/jsxsd/framework/xsMain.htmlx#*", "https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_list.do*", "https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_edit.do*"],
+  "match": [
+    "https://jwxt.sztu.edu.cn/jsxsd/framework/xsMain.htmlx#*",
+    "https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_list.do*",
+    "https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_edit.do*",
+    "https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/framework/xsMain.htmlx#",
+    "https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/xspj/xspj_list.do*",
+    "https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/xspj/xspj_edit.do*"
+  ],
   "grant": "none",
   "license": "MIT"
 }

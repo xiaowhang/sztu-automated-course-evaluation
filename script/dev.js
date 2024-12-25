@@ -1,7 +1,8 @@
 const URLS = {
-  MAIN: 'https://jwxt.sztu.edu.cn/jsxsd/framework/xsMain.htmlx#',
   LIST: 'https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_list.do',
   EDIT: 'https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_edit.do',
+  VPNLIST: 'https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/xspj/xspj_list.do',
+  VPNEDIT: 'https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/xspj/xspj_edit.do',
 };
 
 function handleListPage() {
@@ -40,12 +41,13 @@ function handleEditPage() {
 
 function main() {
   const currentUrl = location.pathname;
+  console.log('✅ 脚本开始执行', currentUrl);
 
-  if (URLS.LIST.includes(currentUrl)) {
+  if (URLS.LIST.includes(currentUrl) || URLS.VPNLIST.includes(currentUrl)) {
     handleListPage();
-  } else if (URLS.EDIT.includes(currentUrl)) {
+  } else if (URLS.EDIT.includes(currentUrl) || URLS.VPNEDIT.includes(currentUrl)) {
     handleEditPage();
   }
 }
 
-main().catch(err => console.error('脚本执行出错:', err));
+main().catch(err => console.error('❌ 脚本执行出错:', err));
