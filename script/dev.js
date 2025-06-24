@@ -7,7 +7,6 @@ const URLS = {
 
 function handleListPage() {
   const urlList = [];
-
   const trList = document.querySelectorAll('tr');
 
   for (let i = 1; i < trList.length; i++) {
@@ -17,7 +16,7 @@ function handleListPage() {
   }
 
   if (urlList.length !== 0) {
-    urlList.forEach(url => window.open(url));
+    urlList.forEach(url => GM_openInTab(location.origin + url, { active: true }));
   } else {
     alert('已完成所有评教，请点赞老师后及时提交！！！');
   }
@@ -25,7 +24,6 @@ function handleListPage() {
 
 function handleEditPage() {
   const tdList = document.querySelectorAll('[name="zbtd"]');
-  console.info(tdList);
   for (const td of tdList) {
     td.children[0].click();
   }
@@ -33,21 +31,16 @@ function handleEditPage() {
 
   const submit = document.getElementById('bc');
   submit.click();
-
-  setTimeout(function () {
-    window.close();
-  }, 2000);
 }
 
 function main() {
   const currentUrl = location.pathname;
-  console.log('✅ 脚本开始执行', currentUrl);
 
-  if (URLS.LIST.includes(currentUrl) || URLS.VPNLIST.includes(currentUrl)) {
+  if (currentUrl.includes('/jsxsd/xspj/xspj_list.do')) {
     handleListPage();
-  } else if (URLS.EDIT.includes(currentUrl) || URLS.VPNEDIT.includes(currentUrl)) {
+  } else if (currentUrl.includes('/jsxsd/xspj/xspj_edit.do')) {
     handleEditPage();
   }
 }
 
-main().catch(err => console.error('❌ 脚本执行出错:', err));
+main();
