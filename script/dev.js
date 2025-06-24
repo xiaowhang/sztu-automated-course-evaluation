@@ -1,10 +1,3 @@
-const URLS = {
-  LIST: 'https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_list.do',
-  EDIT: 'https://jwxt.sztu.edu.cn/jsxsd/xspj/xspj_edit.do',
-  VPNLIST: 'https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/xspj/xspj_list.do',
-  VPNEDIT: 'https://jwxt-sztu-edu-cn-s.webvpn.sztu.edu.cn:8118/jsxsd/xspj/xspj_edit.do',
-};
-
 function handleListPage() {
   const urlList = [];
   const trList = document.querySelectorAll('tr');
@@ -18,7 +11,7 @@ function handleListPage() {
   if (urlList.length !== 0) {
     urlList.forEach(url => GM_openInTab(location.origin + url, { active: true }));
   } else {
-    alert('已完成所有评教，请点赞老师后及时提交！！！');
+    alert('已完成所有评教，请及时提交！！！');
   }
 }
 
