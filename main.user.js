@@ -11,6 +11,17 @@
 // @license         MIT
 // ==/UserScript==
 
+/*
+ * 本脚本基于 FxxkMyCOS (https://github.com/GuestRyan/FxxkMyCOS)
+ * 原作者: GuestRyan, para-lyze
+ * 许可协议: MIT License
+ *
+ * 你可以自由使用、修改和分发本脚本，但必须保留本版权声明和 MIT 许可信息。
+ *
+ * 修改作者: xiaowhang
+ * 修改内容: 添加面板配置
+ */
+
 
 (function () {
   'use strict';
